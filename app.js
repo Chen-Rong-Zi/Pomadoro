@@ -58,4 +58,23 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('start').addEventListener('click', startTimer);
   document.getElementById('pause').addEventListener('click', pauseTimer);
   document.getElementById('reset').addEventListener('click', resetTimer);
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 });
+
+// Theme toggle
+let currentTheme = 'tokyo-dark';
+
+function toggleTheme() {
+  const body = document.body;
+  if (currentTheme === 'tokyo-dark') {
+    body.classList.remove('tokyo-dark');
+    body.classList.add('blur-white');
+    currentTheme = 'blur-white';
+    document.querySelector('.theme-toggle').textContent = '🌙';
+  } else {
+    body.classList.remove('blur-white');
+    body.classList.add('tokyo-dark');
+    currentTheme = 'tokyo-dark';
+    document.querySelector('.theme-toggle').textContent = '☀️';
+  }
+}

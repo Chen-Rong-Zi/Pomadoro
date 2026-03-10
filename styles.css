@@ -56,3 +56,49 @@ button:hover {
 button:active {
   transform: scale(0.98);
 }
+
+.tokyo-dark {
+  /* Existing dark theme styles */
+}
+
+.blur-white {
+  background-color: #f0f5ff;
+}
+
+.blur-white .container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blur-white h1 {
+  color: #4a6cf7;
+}
+
+.blur-white #mode {
+  color: #4a5568;
+}
+
+.blur-white .timer {
+  color: #2d3748;
+}
+
+.blur-white button {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.blur-white button:hover {
+  background-color: #3b5bdb;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
