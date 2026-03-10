@@ -10,10 +10,53 @@
   <div class="container">
     <button id="theme-toggle" class="theme-toggle">🌙</button>
     <h1>Pomodoro Timer</h1>
-    <div id="mode">Focus Time</div>
+    
+    <!-- Settings Panel -->
+    <div class="settings-panel">
+      <div class="setting">
+        <label for="focus-time">Focus (min):</label>
+        <input type="number" id="focus-time" min="1" max="120" value="25">
+      </div>
+      <div class="setting">
+        <label for="break-time">Break (min):</label>
+        <input type="number" id="break-time" min="1" max="30" value="5">
+      </div>
+      <div class="setting">
+        <label for="sound-select">Alarm:</label>
+        <select id="sound-select">
+          <option value="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3">Beep</option>
+          <option value="https://assets.mixkit.co/sfx/preview/mixkit-classic-alarm-995.mp3">Classic</option>
+          <option value="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3">Bell</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Progress and Stats -->
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+    
+    <div class="stats">
+      <div id="mode">Focus Time</div>
+      <div id="session-count">Sessions: 0</div>
+    </div>
+    
     <div class="timer">
       <span id="minutes">25</span>:<span id="seconds">00</span>
     </div>
+    
+    <!-- Task List -->
+    <div class="task-container">
+      <h3>Tasks</h3>
+      <div class="task-input">
+        <input type="text" id="task-input" placeholder="Add a task...">
+        <button id="add-task">+</button>
+      </div>
+      <ul id="task-list"></ul>
+    </div>
+    
     <div class="controls">
       <button id="start">Start</button>
       <button id="pause">Pause</button>
